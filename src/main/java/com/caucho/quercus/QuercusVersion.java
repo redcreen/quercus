@@ -29,17 +29,15 @@
 
 package com.caucho.quercus;
 
-import com.caucho.Version;
-
 public class QuercusVersion
 {
   public static String getVersionNumber()
   {
-    return Version.VERSION;
+    return "4.0.s20130507";
   }
 
   public static String getVersionDate()
   {
-    return Version.VERSION_DATE;
+    return "20130507T093810";
   }
 }
