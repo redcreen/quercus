@@ -72,12 +72,16 @@ public abstract class QuercusBaseTest {
         return eval(in, null) ;
     }
 
-    protected String evalString(String php) {
+    protected String evalString(String php,  Map<String, Object> context) {
         try {
-            return eval(new ByteArrayInputStream(php.getBytes(encode)), null) ;
+            return eval(new ByteArrayInputStream(php.getBytes(encode)), context) ;
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    protected String evalString(String php) {
+        return evalString(php, null) ;
     }
 
 

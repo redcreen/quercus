@@ -8,11 +8,11 @@ import org.junit.Test;
  * Date: 13-5-8
  * Time: ионГ10:43
  */
-public class EchoStatementTest extends QuercusBaseTest {
+public class ForStatementTest extends QuercusBaseTest {
 
     @Test
     public void test_php() {
-        String path = "statement/echo.php";
+        String path = "statement/for.php";
         assertFile(path);
     }
 }

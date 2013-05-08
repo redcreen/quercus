@@ -8,7 +8,7 @@ import org.junit.Test;
  * Date: 13-5-8
  * Time: ионГ10:43
  */
-public class SimpleQuercusTest extends QuercusBaseTest {
+public class SimpleTest extends QuercusBaseTest {
 
     @Test
     public void testEcho () {
@@ -21,11 +21,5 @@ public class SimpleQuercusTest extends QuercusBaseTest {
         String path = "statement/echo.php";
         String ret = evalFile(path);
         Assert.assertEquals("hello", ret);
-    }
-
-    @Test
-    public void testEcho_php() {
-        String path = "statement/echo.php";
-        assertFile(path);
     }
 }

@@ -1,4 +1,4 @@
+text
 <?php
-echo 'hello\n\r';
-echo 'hello\n';
+    echo 'hello'.'echo'.'\n'  ;
 ?>
