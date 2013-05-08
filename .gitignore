@@ -164,3 +164,6 @@ pip-log.txt
 
 .git
 target
+resin-quercus.iml
+resin-quercus.ipr
+resin-quercus.iws

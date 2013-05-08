@@ -10,7 +10,7 @@
   <artifactId>resin-quercus</artifactId>
   <packaging>jar</packaging>
   <version>4.0.35.1</version>
-  <name>Resin Utilities</name>
+  <name>Resin quercus</name>
   <url>http://caucho.com</url>
 
   <licenses>
@@ -46,8 +46,14 @@
             <version>3.0</version>
             <scope>provided</scope>
         </dependency>
-	
-    </dependencies>
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.10</version>
+          <scope>test</scope>
+      </dependency>
+
+  </dependencies>
     <build>
         <plugins>
             <plugin>
