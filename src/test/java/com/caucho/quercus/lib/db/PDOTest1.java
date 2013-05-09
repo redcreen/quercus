@@ -1,7 +1,6 @@
-package com.caucho.quercus.javaclssses;
+package com.caucho.quercus.lib.db;
 
 import com.caucho.quercus.QuercusBaseTest;
-import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -9,12 +8,12 @@ import org.junit.Test;
  * Date: 13-5-8
  * Time: ионГ10:43
  */
-public class Java1Test extends QuercusBaseTest {
+public class PDOTest1 extends QuercusBaseTest {
 
     @Test
     public void test_php() {
-        String path = "javaclasses/java1.php";
+        String path = "lib/db/pdo1.php";
         String ret = evalFile(path) ;
-        Assert.assertNotNull(ret);
+        System.out.println(ret);
     }
 }

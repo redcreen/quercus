@@ -27,7 +27,6 @@ import static org.junit.Assert.fail;
  */
 public abstract class QuercusBaseTest {
     protected Quercus quercus;
-    protected Env env;
     protected int timeout;
     protected Path path;
     protected String encode = "GBK";
@@ -44,6 +43,7 @@ public abstract class QuercusBaseTest {
     }
 
     protected String eval(InputStream in, Map<String, Object> context)  {
+        Env env = null;
         try {
             QuercusProgram program = QuercusParser.parse(quercus, path, Vfs.openRead(new InputStreamReader(in, encode)));
             Writer writer = new StringWriter();
@@ -59,12 +59,17 @@ public abstract class QuercusBaseTest {
             }
             simpleScriptContext.setBindings(bindings, ScriptContext.ENGINE_SCOPE);
             env.setScriptContext(simpleScriptContext);
+            env.start();
             program.execute(env);
             writerStream.flushBuffer();
             writerStream.free();
             return writer.toString();
         }catch (Exception e) {
             throw new RuntimeException(e);
+        }finally {
+            if (env != null) {
+                env.close();
+            }
         }
     }
 
