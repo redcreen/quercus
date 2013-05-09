@@ -37,6 +37,7 @@ public abstract class QuercusBaseTest {
         if (timeout >0) {
             quercus.setIni("max_execution_time", String.valueOf(timeout));
         }
+//        quercus.setIni("disable_functions","phpinfo");
         quercus.setUnicodeSemantics(true);
         quercus.init();
         quercus.start();
